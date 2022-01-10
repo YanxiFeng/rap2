@@ -16,6 +16,7 @@ import { showMessage, MSG_TYPE } from 'actions/common'
 import { push } from 'connected-react-router'
 import { getRouter } from 'selectors/router'
 import { Link } from '../../family'
+import { useTranslation } from 'react-i18next'
 
 const { serve } = config
 
@@ -71,6 +72,7 @@ export default function LoginForm() {
   const classes = useStyles()
   const dispatch = useDispatch()
   const router = useSelector(getRouter)
+  const { t } = useTranslation()
   const { pathname, hash, search } = router.location
   const handleSubmit = (e?: any) => {
     e && e.preventDefault()
@@ -170,7 +172,7 @@ export default function LoginForm() {
             </div>
           </ListItem>
           <ListItem className={classes.ctlend}>
-            <Link to="#" onClick={() => dispatch(push('/account/findpwd'))} className="operation ">忘记密码？</Link>
+            <Link to="#" onClick={() => dispatch(push('/account/findpwd'))} className="operation ">{t('forget-password')}</Link>
           </ListItem>
         </List>
       </Paper>

@@ -1,5 +1,6 @@
 import './assets/index.css'
 import 'animate.css'
+import './i18n/react-i18next-config'
 
 import React from 'react'
 import Family, { render } from './family'
