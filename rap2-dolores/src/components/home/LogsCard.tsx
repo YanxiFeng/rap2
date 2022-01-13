@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, moment } from '../../family'
 import { Spin } from '../utils'
 import { Card } from '@material-ui/core'
+import imgURL  from "./chope_logo.png"
 
 // DONE 2.3 重构 LogView
 // 1. √ 旧逻辑把 targe 和 type 混在一起，各种判断看的好蛋疼
@@ -13,7 +14,7 @@ import { Card } from '@material-ui/core'
 // 5. √ FromNow 应该提成组件
 const UserAvatar = ({ user }: any) => (
   user
-    ? <img alt={user.empId} src={`https://work.alibaba-inc.com/photo/${user.empId}.220x220.jpg`} className="Log-avatar" />
+    ? <img alt={user.empId} src={imgURL} className="Log-avatar" />
     : null
 )
 const UserLink = ({ user }: any) => (
