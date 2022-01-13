@@ -102,12 +102,11 @@ export default function LoginForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="email">邮箱</InputLabel>
+              <InputLabel htmlFor="email">{t("email")}</InputLabel>
               <Input
                 tabIndex={0}
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="Email"
                 autoFocus={true}
                 required={true}
                 endAdornment={
@@ -121,7 +120,7 @@ export default function LoginForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="password">密码</InputLabel>
+              <InputLabel htmlFor="password">{t("password")}</InputLabel>
               <Input
                 tabIndex={1}
                 name="password"
@@ -143,7 +142,7 @@ export default function LoginForm() {
           </ListItem>
           <ListItem>
             <FormControl fullWidth={true}>
-              <InputLabel htmlFor="captcha">验证码</InputLabel>
+              <InputLabel htmlFor="captcha">{t("verify-code")}</InputLabel>
               <Input
                 tabIndex={2}
                 name="captcha"
@@ -167,8 +166,8 @@ export default function LoginForm() {
               <Refresh />
             </div>
             <div className={classes.buttonWrapper}>
-              <Button variant="outlined" color="default" style={{ marginRight: 8 }} onClick={() => dispatch(push('/account/register'))}>注册</Button>
-              <Button variant="contained" color="primary" tabIndex={3} onClick={handleSubmit}>登录</Button>
+              <Button variant="outlined" color="default" style={{ marginRight: 8 }} onClick={() => dispatch(push('/account/register'))}>{t("register")}</Button>
+              <Button variant="contained" color="primary" tabIndex={3} onClick={handleSubmit}>{t("login")}</Button>
             </div>
           </ListItem>
           <ListItem className={classes.ctlend}>
