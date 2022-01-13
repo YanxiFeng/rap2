@@ -1,0 +1,1290 @@
+.RepositoryEditor > .header {
+  position: relative;
+  padding: 1.3rem;
+  background-color: #fafbfc;
+}
+.RepositoryEditor > .header > .title {
+  font-size: 1.6em;
+  margin-right: 0.65rem;
+}
+.RepositoryEditor > .header > .title .slash {
+  color: #999;
+}
+.RepositoryEditor > .header > .toolbar {
+  display: inline-block;
+}
+.RepositoryEditor > .header > .toolbar a, .RepositoryEditor > .header > .toolbar .fake-link {
+  margin-right: 0.65rem;
+}
+.RepositoryEditor > .header > .desc {
+  white-space: pre-wrap;
+  margin: 1rem 0 0.5rem 0;
+  color: #666;
+}
+
+.RelatedProjects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0.65rem 0 -1rem;
+  color: #888;
+}
+.RelatedProjects > .Project {
+  border: 1px solid #E6E6E6;
+  background: #FFF;
+  padding: 0 0.65rem;
+  margin-bottom: 0.65rem;
+  margin-right: 0.65rem;
+  line-height: 2.44;
+}
+.RelatedProjects > .Project .title {
+  margin-right: 0.7rem;
+}
+.RelatedProjects > .Project svg {
+  transform: scale(1.2) translateY(-1px);
+}
+.RelatedProjects i {
+  color: #888;
+  font-style: normal;
+  margin-left: 0.5rem;
+}
+
+.RepositorySearcher.dropdown {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+  left: auto;
+}
+.RepositorySearcher.dropdown > .dropdown-input {
+  margin-bottom: 0;
+  width: 20rem;
+}
+.RepositorySearcher.dropdown > .dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: auto;
+  display: block;
+  min-width: 100%;
+  max-height: 50rem;
+  overflow: scroll;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item.dropdown-item-module {
+  padding-left: 1.5rem;
+  color: #333;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item.dropdown-item-interface {
+  padding-left: 4rem;
+  color: #333;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item.dropdown-item-property {
+  padding-left: 6.5rem;
+  color: #666;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item > .label {
+  margin-right: 0.5rem;
+  color: #666;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item > .dropdown-item-clip {
+  margin-right: 0.5rem;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item > .dropdown-item-clip .highlight {
+  font-weight: bold;
+  color: #4A7BF7;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item:active {
+  color: #FFF;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item:active > .label {
+  color: #FFF;
+}
+.RepositorySearcher.dropdown > .dropdown-menu a.dropdown-item:active > .dropdown-item-clip .highlight {
+  color: #FFF;
+}
+
+.DuplicatedInterfacesWarning {
+  margin-top: 2rem;
+}
+.DuplicatedInterfacesWarning .more-link {
+  float: right;
+}
+
+.ModuleList {
+  margin: 0;
+  padding: 0 1.3rem;
+  list-style: none;
+  border-bottom: 1px solid #e1e4e8;
+  background-color: #fafbfc;
+}
+.ModuleList > li {
+  position: relative;
+  display: block;
+  float: left;
+  margin-bottom: -1px;
+  padding: 0.8rem 0.78rem;
+  border: 1px solid transparent;
+  border-width: 3px 1px 0px 1px;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.ModuleList > li.active {
+  border-bottom-color: transparent;
+  background-color: white;
+  cursor: default;
+}
+.ModuleList > li.active:hover {
+  background-color: white;
+}
+.ModuleList > li > .Module {
+  position: relative;
+}
+.ModuleList > li > .Module a.name {
+  color: #586069;
+}
+.ModuleList > li > .Module .toolbar {
+  display: inline-block;
+}
+.ModuleList > li > .Module .toolbar a, .ModuleList > li > .Module .toolbar .fake-link {
+  margin-left: 0.325rem;
+  font-size: 1rem;
+  color: #999;
+}
+.ModuleList > li > .Module .toolbar a:hover, .ModuleList > li > .Module .toolbar .fake-link:hover {
+  color: #4A7BF7;
+}
+.ModuleList > li:hover > .Module .toolbar {
+  display: inline-block;
+}
+.ModuleList > li.active > .Module a.name {
+  color: #333;
+}
+.ModuleList > li.active > .Module .toolbar {
+  display: inline-block;
+}
+
+.InterfaceWrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  padding: 1.3rem;
+}
+.InterfaceWrapper .InterfaceList {
+  width: 23rem;
+  flex-shrink: 0;
+}
+.InterfaceWrapper .InterfaceEditor {
+  overflow-x: hidden;
+  padding: 0 1px;
+  flex-grow: 1;
+}
+
+.InterfaceList {
+  position: sticky;
+  top: 10px;
+  height: calc(100vh - 10px);
+}
+.InterfaceList .header {
+  margin-bottom: 0.65rem;
+}
+.InterfaceList .header .newIntf {
+  margin-bottom: 0.65rem;
+}
+.InterfaceList .scrollWrapper {
+  border-radius: 0.4rem;
+}
+.InterfaceList .rcs-inner-handle {
+  background-color: rgba(63, 81, 181, 0.3);
+}
+.InterfaceList ul.body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: calc(100vh - 115px);
+}
+.InterfaceList ul.body li {
+  position: relative;
+  padding: 0.65rem 0.65rem;
+}
+.InterfaceList ul.body li:first-child {
+  border-top-left-radius: 0.3rem;
+}
+.InterfaceList ul.body li:last-child {
+  border-bottom: 0;
+  border-bottom-left-radius: 0.3rem;
+}
+.InterfaceList ul.body li .Interface {
+  position: relative;
+  padding-right: 2.6rem;
+}
+.InterfaceList ul.body li .Interface .name {
+  position: relative;
+  font-size: 1.1rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.InterfaceList ul.body li .Interface .url {
+  font-size: 1rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.54);
+}
+.InterfaceList ul.body li .Interface .toolbar {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1rem;
+}
+.InterfaceList ul.body li .Interface .toolbar a, .InterfaceList ul.body li .Interface .toolbar .fake-link {
+  margin-left: 0.325rem;
+  color: #999;
+}
+.InterfaceList ul.body li .Interface .toolbar a:hover, .InterfaceList ul.body li .Interface .toolbar .fake-link:hover {
+  color: #4A7BF7;
+}
+.InterfaceList ul.body li .Interface .locked {
+  font-size: 1rem;
+  color: #FFB400;
+}
+.InterfaceList ul.body li:hover .toolbar {
+  display: block;
+}
+.InterfaceList ul.body li.active .Interface .name a {
+  color: #333;
+}
+.InterfaceList ul.body li.active .Interface .name a:hover {
+  color: #333;
+}
+.InterfaceList ul.body li.active .Interface .toolbar {
+  display: block;
+}
+
+.InterfaceEditor {
+  margin-left: 1.3rem;
+  position: relative;
+}
+.InterfaceEditor .InterfaceEditorToolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+.InterfaceEditor .InterfaceEditorToolbar .btn.edit, .InterfaceEditor .InterfaceEditorToolbar .btn.save, .InterfaceEditor .InterfaceEditorToolbar .btn.cancel, .InterfaceEditor .InterfaceEditorToolbar .locker-success, .InterfaceEditor .InterfaceEditorToolbar .locker-warning {
+  display: block;
+  margin-bottom: 0.325rem;
+  width: 12rem;
+}
+.InterfaceEditor .InterfaceEditorToolbar .locker-success, .InterfaceEditor .InterfaceEditorToolbar .locker-warning {
+  display: inline-block;
+  padding: 0.325rem 1.5rem;
+  border-radius: 0.4rem;
+  color: white;
+  background-color: #6CB12A;
+}
+.InterfaceEditor .InterfaceEditorToolbar .locker-warning {
+  background-color: #FFB400;
+}
+
+.InterfaceSummary {
+  margin-bottom: 1.3rem;
+}
+.InterfaceSummary > .header {
+  margin-bottom: 0.5rem;
+}
+.InterfaceSummary > .header > .title {
+  font-size: 1.6rem;
+  margin-right: 0.65rem;
+}
+.InterfaceSummary > .header > .title .slash {
+  color: #999;
+}
+.InterfaceSummary > .header a.edit, .InterfaceSummary > .header a.delete {
+  margin-right: 0.5rem;
+}
+.InterfaceSummary ul.body {
+  color: #666;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.InterfaceSummary ul.body > li {
+  margin-bottom: 0.2rem;
+}
+.InterfaceSummary ul.body > li .label {
+  color: #666;
+  margin-right: 0.3rem;
+}
+
+.PropertyList {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
+.PropertyList > .header {
+  margin-bottom: 0.65rem;
+}
+.PropertyList > .header > .title {
+  font-size: 1.2rem;
+  margin-right: 0.65rem;
+  font-weight: bold;
+}
+.PropertyList > .header > .toolbar {
+  float: right;
+}
+.PropertyList > .header > .toolbar .checked-button {
+  background-color: rgba(63, 81, 181, 0.17);
+}
+.PropertyList > .header > .toolbar .preview {
+  margin: 0;
+}
+.PropertyList > .header > .toolbar .preview input {
+  margin-right: 0.5rem;
+}
+.PropertyList > .body {
+  margin-bottom: 0.65rem;
+}
+.PropertyList > .footer > .Previewer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1.65rem;
+}
+.PropertyList > .footer > .Previewer > .result-template,
+.PropertyList > .footer > .Previewer > .result-mocked {
+  width: 49%;
+}
+.PropertyList > .footer > .Previewer > .result-template > .header,
+.PropertyList > .footer > .Previewer > .result-mocked > .header {
+  margin-bottom: 0.5rem;
+}
+.PropertyList > .footer > .Previewer > .result-template > .header .title,
+.PropertyList > .footer > .Previewer > .result-mocked > .header .title {
+  margin-right: 6px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.PropertyList > .footer > .Previewer > .result-template > pre.body,
+.PropertyList > .footer > .Previewer > .result-mocked > pre.body {
+  max-height: 90vh;
+  height: 100%;
+  overflow: auto;
+}
+.PropertyList > .footer > .Previewer > .result-valid {
+  padding-top: 2.5rem;
+  text-align: center;
+  color: #999;
+}
+
+@keyframes hightlight {
+  0% {
+    background-color: unset;
+  }
+  50% {
+    background-color: #fff3cd;
+  }
+  100% {
+    background-color: unset;
+  }
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row,
+.SortableTreeTable .SortableTreeTableRow .flex-row {
+  display: flex;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row.highlight .thtd, .SortableTreeTable .SortableTreeTableHeader .flex-row.highlight .td, .SortableTreeTable .SortableTreeTableHeader .flex-row.highlight .th,
+.SortableTreeTable .SortableTreeTableRow .flex-row.highlight .thtd,
+.SortableTreeTable .SortableTreeTableRow .flex-row.highlight .td,
+.SortableTreeTable .SortableTreeTableRow .flex-row.highlight .th {
+  animation: hightlight 1.5s 1;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .thtd, .SortableTreeTable .SortableTreeTableHeader .flex-row .td, .SortableTreeTable .SortableTreeTableHeader .flex-row .th,
+.SortableTreeTable .SortableTreeTableRow .flex-row .thtd,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th {
+  border: 1px solid #eceeef;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: -1px;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th {
+  padding: 0.75rem;
+  font-weight: bold;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: -1px;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th.operations, .SortableTreeTable .SortableTreeTableHeader .flex-row .td.operations,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th.operations,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.operations {
+  padding: 0.5rem;
+  width: 0.65rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th.name, .SortableTreeTable .SortableTreeTableHeader .flex-row .td.name,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th.name,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.name {
+  width: 20rem;
+  flex-grow: 3;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th.type, .SortableTreeTable .SortableTreeTableHeader .flex-row .td.type,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th.type,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.type {
+  width: 7rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th.rule, .SortableTreeTable .SortableTreeTableHeader .flex-row .td.rule,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th.rule,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.rule {
+  width: 10rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th.value, .SortableTreeTable .SortableTreeTableHeader .flex-row .td.value,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th.value,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.value {
+  width: 10rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th.desc, .SortableTreeTable .SortableTreeTableHeader .flex-row .td.desc,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th.desc,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.desc {
+  width: 15rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th .helper,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th .helper {
+  margin-left: 0.5rem;
+  color: #999;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .th .helper:hover,
+.SortableTreeTable .SortableTreeTableRow .flex-row .th .helper:hover {
+  color: #4A7BF7;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.operations,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.operations {
+  height: auto;
+  line-height: 1;
+  justify-content: flex-end;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.operations a,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.operations a {
+  color: #999;
+  margin-right: 0.5rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.operations a:last-child,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.operations a:last-child {
+  margin-right: 0;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.operations a:hover,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.operations a:hover {
+  color: #4A7BF7;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload {
+  padding: 0.5rem 0.75rem;
+  height: auto;
+  line-height: 1.5;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name {
+  justify-content: space-between;
+  position: relative;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name .name-wrapper,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name .name-wrapper {
+  flex-grow: 1;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-1,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-1 {
+  padding-left: 1.4rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-1:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-1:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.65rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-2,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-2 {
+  padding-left: 2.05rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-2:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-2:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1.3rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-3,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-3 {
+  padding-left: 2.7rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-3:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-3:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1.95rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-4,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-4 {
+  padding-left: 3.35rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-4:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-4:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2.6rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-5,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-5 {
+  padding-left: 4rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-5:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-5:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.25rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-6,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-6 {
+  padding-left: 4.65rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-6:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-6:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.9rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-7,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-7 {
+  padding-left: 5.3rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-7:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-7:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4.55rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-8,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-8 {
+  padding-left: 5.95rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-8:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-8:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5.2rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-9,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-9 {
+  padding-left: 6.6rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-9:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-9:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5.85rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-10,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-10 {
+  padding-left: 7.25rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-10:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-10:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6.5rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-11,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-11 {
+  padding-left: 7.9rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-11:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-11:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 7.15rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-12,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-12 {
+  padding-left: 8.55rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-12:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-12:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 7.8rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-13,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-13 {
+  padding-left: 9.2rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-13:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-13:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 8.45rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-14,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-14 {
+  padding-left: 9.85rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-14:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-14:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 9.1rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-15,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-15 {
+  padding-left: 10.5rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-15:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-15:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 9.75rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-16,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-16 {
+  padding-left: 11.15rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-16:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-16:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10.4rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-17,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-17 {
+  padding-left: 11.8rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-17:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-17:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 11.05rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-18,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-18 {
+  padding-left: 12.45rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-18:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-18:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 11.7rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-19,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-19 {
+  padding-left: 13.1rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-19:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-19:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 12.35rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-20,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-20 {
+  padding-left: 13.75rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-20:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-20:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 13rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-21,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-21 {
+  padding-left: 14.4rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-21:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-21:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 13.65rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-22,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-22 {
+  padding-left: 15.05rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-22:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-22:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 14.3rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-23,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-23 {
+  padding-left: 15.7rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-23:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-23:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 14.95rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-24,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-24 {
+  padding-left: 16.35rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-24:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-24:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15.6rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-25,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-25 {
+  padding-left: 17rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-25:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-25:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 16.25rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-26,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-26 {
+  padding-left: 17.65rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-26:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-26:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 16.9rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-27,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-27 {
+  padding-left: 18.3rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-27:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-27:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 17.55rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-28,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-28 {
+  padding-left: 18.95rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-28:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-28:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 18.2rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-29,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-29 {
+  padding-left: 19.6rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-29:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-29:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 18.85rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-30,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-30 {
+  padding-left: 20.25rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-30:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-30:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 19.5rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-31,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-31 {
+  padding-left: 20.9rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-31:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-31:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20.15rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-32,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-32 {
+  padding-left: 21.55rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-32:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-32:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 20.8rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-33,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-33 {
+  padding-left: 22.2rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-33:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-33:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 21.45rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-34,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-34 {
+  padding-left: 22.85rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-34:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-34:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 22.1rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-35,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-35 {
+  padding-left: 23.5rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-35:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-35:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 22.75rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-36,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-36 {
+  padding-left: 24.15rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-36:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-36:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 23.4rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-37,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-37 {
+  padding-left: 24.8rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-37:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-37:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24.05rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-38,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-38 {
+  padding-left: 25.45rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-38:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-38:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24.7rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-39,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-39 {
+  padding-left: 26.1rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-39:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-39:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 25.35rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-40,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-40 {
+  padding-left: 26.75rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-40:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-40:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 26rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-41,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-41 {
+  padding-left: 27.4rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-41:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-41:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 26.65rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-42,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-42 {
+  padding-left: 28.05rem;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.name.depth-42:after,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.name.depth-42:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 27.3rem;
+  opacity: 0.5;
+  border-right: 1px dashed #707070;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.value,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.value {
+  max-height: 30vh;
+  overflow: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.value span.value-container,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.value span.value-container {
+  white-space: pre;
+  margin: auto 0;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.required,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.required {
+  padding: 0;
+}
+.SortableTreeTable .SortableTreeTableHeader .flex-row .td.payload.desc,
+.SortableTreeTable .SortableTreeTableRow .flex-row .td.payload.desc {
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+.SortableTreeTable.editable .flex-row .th.operations, .SortableTreeTable.editable .flex-row .td.operations {
+  width: 4.5rem;
+  padding: 0.5rem 0.75rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload {
+  padding: 0;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-0 {
+  padding-left: 0rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-0:after {
+  width: 0rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-1 {
+  padding-left: 1.3rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-1:after {
+  width: 1.3rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-2 {
+  padding-left: 2.6rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-2:after {
+  width: 2.6rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-3 {
+  padding-left: 3.9rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-3:after {
+  width: 3.9rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-4 {
+  padding-left: 5.2rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-4:after {
+  width: 5.2rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-5 {
+  padding-left: 6.5rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-5:after {
+  width: 6.5rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-6 {
+  padding-left: 7.8rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-6:after {
+  width: 7.8rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-7 {
+  padding-left: 9.1rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-7:after {
+  width: 9.1rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-8 {
+  padding-left: 10.4rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-8:after {
+  width: 10.4rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-9 {
+  padding-left: 11.7rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-9:after {
+  width: 11.7rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-10 {
+  padding-left: 13rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.name.depth-10:after {
+  width: 13rem;
+}
+.SortableTreeTable.editable .flex-row .td.payload.value {
+  max-height: unset;
+  overflow-wrap: break-word;
+}
+.SortableTreeTable.editable input.editable,
+.SortableTreeTable.editable select.editable,
+.SortableTreeTable.editable textarea.editable {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  line-height: 1.5;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.Importer .CodeMirror {
+  height: 30rem;
+}
+.Importer textarea.result {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+/*# sourceMappingURL=RepositoryEditor.css.map */

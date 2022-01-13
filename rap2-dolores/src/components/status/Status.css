@@ -1,0 +1,39 @@
+.Status {
+  padding: 1.3rem;
+}
+.Status > .header {
+  margin-bottom: 1.95rem;
+}
+.Status > .header > .title {
+  font-size: 1.3rem;
+}
+.Status .body {
+  text-align: center;
+}
+.Status .body .card {
+  min-width: 200px;
+  margin: 8px;
+}
+.Status .body .card .name {
+  font-size: 1rem;
+}
+.Status .body .card .value {
+  font-size: 3.25rem;
+}
+.Status .body .card .unit {
+  margin-left: 5px;
+  font-size: 1rem;
+  color: #ccc;
+}
+.Status .body .chart {
+  margin: 8px;
+  padding: 16px;
+  width: 40%;
+  height: 350px;
+}
+.Status .body .chart > .header > .title {
+  font-size: 1.3rem;
+  margin-bottom: 0.65rem;
+}
+
+/*# sourceMappingURL=Status.css.map */

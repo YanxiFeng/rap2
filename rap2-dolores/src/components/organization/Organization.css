@@ -1,0 +1,95 @@
+.OrganizationListWrapper {
+  padding: 1.3rem;
+}
+.OrganizationListWrapper > .header {
+  margin-bottom: 1.3rem;
+}
+.OrganizationListWrapper > .header .title {
+  font-size: 1.3rem;
+}
+.OrganizationListWrapper > .toolbar {
+  margin-bottom: 1.3rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid #e1e4e8;
+}
+.OrganizationListWrapper > .toolbar select.OrganizationsTypeDropdown {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+.OrganizationListWrapper > .toolbar button.OrganizationCreateButton {
+  padding: 0.4rem 0.65rem;
+  font-size: 1rem;
+}
+.OrganizationListWrapper > .toolbar .form-control {
+  margin-bottom: 0;
+}
+
+.OrganizationList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  padding: 0 15px;
+}
+.OrganizationList .Organization.card {
+  margin-bottom: 0.65rem;
+}
+.OrganizationList .Organization.card .card-block {
+  position: relative;
+}
+.OrganizationList .Organization.card .card-block .name {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.OrganizationList .Organization.card .card-block .desc {
+  margin-top: 0.65rem;
+  height: 6rem;
+  overflow: hidden;
+  color: #666;
+}
+.OrganizationList .Organization.card .card-block .members {
+  color: #666;
+}
+.OrganizationList .Organization.card .card-block .members .avatar {
+  margin-right: 0.2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.OrganizationList .Organization.card .card-block .members .avatar.owner {
+  margin-right: 0.65rem;
+}
+.OrganizationList .Organization.card .card-block .members .popover {
+  white-space: nowrap;
+}
+.OrganizationList .Organization.card .card-block .toolbar {
+  position: absolute;
+  top: 0.78rem;
+  right: 1.25rem;
+  background-color: white;
+}
+.OrganizationList .Organization.card .card-block .toolbar > a, .OrganizationList .Organization.card .card-block .toolbar > .fake-link {
+  margin: 0 0 0 0.325rem;
+  font-size: 1rem;
+  color: #999;
+}
+.OrganizationList .Organization.card .card-block .toolbar > a:hover, .OrganizationList .Organization.card .card-block .toolbar > .fake-link:hover {
+  color: #4A7BF7;
+}
+.OrganizationList .Organization.card .card-block.card-footer {
+  padding-top: 0;
+  background-color: white;
+  border-top: none;
+  color: #666;
+}
+.OrganizationList .Organization.card .card-block.card-footer .ownername {
+  float: left;
+}
+.OrganizationList .Organization.card .card-block.card-footer .fromnow {
+  float: right;
+}
+.OrganizationList .Organization.card:hover .card-block .toolbar {
+  display: block;
+}
+
+/*# sourceMappingURL=Organization.css.map */

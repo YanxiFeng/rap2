@@ -1,0 +1,29 @@
+.Checker {
+  padding: 1.3rem;
+}
+.Checker .card-mods .card-title, .Checker .card-itfs .card-title {
+  float: left;
+  width: 3.25rem;
+  font-size: 1rem;
+}
+.Checker .card-mods a, .Checker .card-itfs a {
+  float: left;
+  margin-right: 0.65rem;
+  width: 10rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+}
+.Checker .card-mods a.active, .Checker .card-itfs a.active {
+  color: #4A7BF7;
+}
+.Checker .card-result {
+  margin-top: 0.65rem;
+}
+.Checker .card-result .card-title {
+  font-size: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+/*# sourceMappingURL=Checker.css.map */

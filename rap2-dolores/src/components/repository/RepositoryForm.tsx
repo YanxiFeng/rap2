@@ -47,7 +47,7 @@ const useStyles = makeStyles(({ spacing }: Theme) => ({
 const schema = Yup.object().shape<Partial<Repository>>({
   name: Yup.string()
     .required(YUP_MSG.REQUIRED)
-    .max(20, YUP_MSG.MAX_LENGTH(20)),
+    .max(50, YUP_MSG.MAX_LENGTH(50)),
   description: Yup.string().max(1000, YUP_MSG.MAX_LENGTH(1000)),
 })
 
