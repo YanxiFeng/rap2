@@ -109,9 +109,9 @@ export default function MoveModuleForm(props: Props) {
       <DialogContent dividers={true}>
         <form className={classes.form} onSubmit={handleSubmit}>
           <div className="rmodal-body">
-            <div style={{ color: '#CC0000', fontSize: 16, marginBottom: 8 }}>请注意这里是移动模块，整个模块哦，不是移动接口。别搞错啦！！！</div>
+            <div style={{ color: '#CC0000', fontSize: 16, marginBottom: 8 }}>请注意这里是移动模块，整个模块哦，不是移动接口。别搞错啦！！！Note that you are moving the entire module, not the interface!!!</div>
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>选择目标仓库：</div>
+              <div className={classes.formTitle}>Select target repository：</div>
               <FormControl>
                 <Select
                   className={classes.select}
@@ -128,7 +128,7 @@ export default function MoveModuleForm(props: Props) {
               </FormControl>
             </div>
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>操作类型：</div>
+              <div className={classes.formTitle}>Operate type：</div>
               <RadioGroup
                 name="radioListOp"
                 value={String(op)}
@@ -137,15 +137,15 @@ export default function MoveModuleForm(props: Props) {
                 }}
                 row={true}
               >
-                <FormControlLabel value={String(OP_MOVE)} control={<Radio />} label="移动" />
-                <FormControlLabel value={String(OP_COPY)} control={<Radio />} label="复制" />
+                <FormControlLabel value={String(OP_MOVE)} control={<Radio />} label="Move" />
+                <FormControlLabel value={String(OP_COPY)} control={<Radio />} label="Copy" />
               </RadioGroup>
             </div>
             <div className={classes.ctl}>
               <Button type="submit" variant="contained" color="primary" style={{ marginRight: 8 }}>
-                提交
+                Submit
               </Button>
-              <Button onClick={() => onClose()}>取消</Button>
+              <Button onClick={() => onClose()}>Cancel</Button>
             </div>
           </div>
         </form>

@@ -13,10 +13,10 @@ import Spin from '../../components/utils/Spin'
 import { showMessage, MSG_TYPE } from 'actions/common'
 
 export const RequestPropertyList = (props: any) => {
-  return <PropertyList scope="request" title="请求参数" label="请求" {...props} />
+  return <PropertyList scope="request" title="Request params" label="请求" {...props} />
 }
 export const ResponsePropertyList = (props: any) => (
-  <PropertyList scope="response" title="响应内容" label="响应" {...props} />
+  <PropertyList scope="response" title="Response contents" label="响应" {...props} />
 )
 type InterfaceEditorProps = {
   auth: any
@@ -175,7 +175,7 @@ class InterfaceEditor extends Component<InterfaceEditorProps, InterfaceEditorSta
 
         {this.state.moveInterfaceDialogOpen && (
           <MoveInterfaceForm
-            title="移动/复制接口"
+            title="Move/Copy API"
             mod={mod}
             repository={repository}
             itfId={itf.id}

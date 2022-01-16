@@ -98,7 +98,7 @@ function DefaultValueModal({ open, handleClose, repositoryId, enqueueSnackbar }:
           </IconButton>
           <Typography variant="h6" className={classes.title}>默认值配置</Typography>
           <Button color="inherit" onClick={onSubmit}>
-            保存
+            Save
         </Button>
         </Toolbar>
       </AppBar>

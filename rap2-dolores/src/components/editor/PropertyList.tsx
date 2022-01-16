@@ -80,12 +80,12 @@ class SortableTreeTableHeader extends Component<any, any> {
               {editable && <GoPlus className="fontsize-14 color-6" />}
             </Link>
           </div>
-          <div className="th name">名称</div>
-          <div className="th type">必选</div>
-          <div className="th type">类型</div>
+          <div className="th name">Name</div>
+          <div className="th type">Required</div>
+          <div className="th type">Type</div>
           {/* TODO 2.3 规则编辑器 */}
           <div className="th rule">
-            生成规则
+            Generate rules
             <a
               href="https://github.com/nuysoft/Mock/wiki/Syntax-Specification"
               rel="noopener noreferrer"
@@ -95,9 +95,9 @@ class SortableTreeTableHeader extends Component<any, any> {
               <GoQuestion />
             </a>
           </div>
-          <div className="th value">初始值</div>
+          <div className="th value">Original value</div>
           {/* 对象和数组也允许设置初始值 */}
-          <div className="th desc">简介</div>
+          <div className="th desc">Introduction</div>
         </div>
       </div>
     )
@@ -539,17 +539,17 @@ class PropertyList extends PureComponent<any, any> {
             <ButtonGroup size="small" color="primary">
               {editable && [
                 <Button key={1} onClick={this.handleClickCreatePropertyButton}>
-                  新建
+                  Create
                 </Button>,
                 <Button key={2} onClick={this.handleClickImporterButton}>
-                  导入
+                  Import
                 </Button>,
               ]}
               <Button
                 className={this.state.previewer ? 'checked-button' : ''}
                 onClick={this.handleClickPreviewerButton}
               >
-                预览
+                Preview
               </Button>
             </ButtonGroup>
           </div>

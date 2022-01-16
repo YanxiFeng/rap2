@@ -98,7 +98,7 @@ function ModuleForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="name"
-                        label="模块名称"
+                        label="Module name"
                         component={TextField}
                         fullWidth={true}
                       />
@@ -106,7 +106,7 @@ function ModuleForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="description"
-                        label="模块简介"
+                        label="Module introduction"
                         component={TextField}
                         multiline={true}
                         fullWidth={true}
@@ -121,13 +121,13 @@ function ModuleForm(props: Props) {
                       className="mr1"
                       disabled={isSubmitting}
                     >
-                      提交
+                      Submit
                     </Button>
                     <Button
                       onClick={() => onClose()}
                       disabled={isSubmitting}
                     >
-                      取消
+                      Cancel
                     </Button>
                   </div>
                 </Form>

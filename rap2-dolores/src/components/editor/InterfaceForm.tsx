@@ -118,7 +118,7 @@ function InterfaceForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="name"
-                        label="名称"
+                        label="Name"
                         component={TextField}
                         fullWidth={true}
                       />
@@ -126,7 +126,7 @@ function InterfaceForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="url"
-                        label="URL地址"
+                        label="URL"
                         component={TextField}
                         fullWidth={true}
                       />
@@ -137,7 +137,7 @@ function InterfaceForm(props: Props) {
                           shrink={true}
                           htmlFor="method-label-placeholder"
                         >
-                          类型
+                          Type
                         </InputLabel>
                         <Select
                           value={values.method}
@@ -160,7 +160,7 @@ function InterfaceForm(props: Props) {
                         shrink={true}
                         htmlFor="method-label-placeholder"
                       >
-                        状态码
+                        Status code
                       </InputLabel>
                       <Select
                         value={values.status}
@@ -180,7 +180,7 @@ function InterfaceForm(props: Props) {
                     <div className={classes.formItem}>
                       <Field
                         name="description"
-                        label="说明"
+                        label="Description"
                         component={TextField}
                         multiline={true}
                         fullWidth={true}
@@ -195,10 +195,10 @@ function InterfaceForm(props: Props) {
                       className="mr1"
                       disabled={isSubmitting}
                     >
-                      提交
+                      Submit
                     </Button>
                     <Button onClick={() => onClose()} disabled={isSubmitting}>
-                      取消
+                      Cancel
                     </Button>
                   </div>
                 </Form>

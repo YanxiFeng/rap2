@@ -50,7 +50,7 @@ export function CreateButton(props: CreateButtonProps) {
           color="primary"
           onClick={() => setUpdateOrganization(true)}
         >
-          编辑团队
+          Edit Team
         </Button>
       )}
 
@@ -66,7 +66,7 @@ export function CreateButton(props: CreateButtonProps) {
         color="primary"
         onClick={() => setCreating(true)}
       >
-        新建仓库
+        Create Repository
       </Button>
 
       <RepositoryForm
@@ -84,7 +84,7 @@ export function CreateButton(props: CreateButtonProps) {
           color="primary"
           onClick={() => setImporting(true)}
         >
-          <GoArrowRight /> 导入仓库
+          <GoArrowRight /> Import Repository
         </Button>
       )}
 
@@ -110,8 +110,8 @@ export function RepositoriesTypeDropdown(props: { url: string }) {
   }
   return (
     <Select className="mr8" value={url} onChange={e => handlePush(e.target.value as string)}>
-      <MenuItem value="/repository/joined">我的仓库</MenuItem>
-      <MenuItem value="/repository/all">所有仓库</MenuItem>
+      <MenuItem value="/repository/joined">My Repositories</MenuItem>
+      <MenuItem value="/repository/all">All Repositories</MenuItem>
     </Select>
   )
 }
@@ -133,7 +133,7 @@ export function SearchGroup(props: { name: string }) {
   return (
     <TextField
       value={query || ''}
-      placeholder="搜索仓库：名称、ID"
+      placeholder="Search：name、ID"
       autoComplete="off"
       onChange={e => setQuery(e.target.value.trim())}
       onKeyUp={e => e.which === 13 && handleSearch()}

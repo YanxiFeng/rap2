@@ -17,7 +17,7 @@ import { FaHistory } from 'react-icons/fa'
 import './RepositoryEditor.css'
 import ExportPostmanForm from '../repository/ExportPostmanForm'
 import ImportSwaggerRepositoryForm from '../repository/ImportSwaggerRepositoryForm'
-import { RootState, Repository } from 'actions/types'
+import { RootState, Repository, Module, Interface } from 'actions/types'
 import DefaultValueModal from './DefaultValueModal'
 import RapperInstallerModal from './RapperInstallerModal'
 import HistoryLogDrawer from './HistoryLogDrawer'
@@ -100,7 +100,7 @@ class RepositoryEditor extends Component<Props, States> {
   changeDocumentTitle() {
     const repository = this.props.repository.data
     if (repository && repository.name) {
-      document.title = `RAP2 ${repository.name}`
+      document.title = `Chope API Docs ${repository.name}`
     }
   }
 
@@ -120,7 +120,7 @@ class RepositoryEditor extends Component<Props, States> {
   }
 
   componentWillUnmount() {
-    document.title = `RAP2`
+    document.title = `Chope API Docs`
   }
 
   render() {
@@ -137,7 +137,7 @@ class RepositoryEditor extends Component<Props, States> {
 
     const repository: Repository = repositoryAsync.data
     if (repository.name) {
-      document.title = `RAP2 ${repository.name}`
+      document.title = `Chope API Docs ${repository.name}`
     }
 
     let mod =
@@ -177,7 +177,7 @@ class RepositoryEditor extends Component<Props, States> {
 
             {repository.canUserEdit ? (
               <span className="g-link edit mr1" onClick={() => this.setState({ update: true })}>
-                <GoPencil /> 编辑
+                <GoPencil /> Edit
               </span>
             ) : null}
             <RepositoryForm
@@ -186,7 +186,7 @@ class RepositoryEditor extends Component<Props, States> {
                 ok && this.handleUpdate()
                 this.setState({ update: false })
               }}
-              title="编辑仓库"
+              title="Edit repository"
               repository={repository}
             />
             <a
@@ -195,7 +195,7 @@ class RepositoryEditor extends Component<Props, States> {
               rel="noopener noreferrer"
               className="g-link"
             >
-              <GoPlug /> 插件
+              <GoPlug /> Plugin
             </a>
             <a
               href={`${serve}/repository/get?id=${repository.id}&token=${repository.token}`}
@@ -203,10 +203,10 @@ class RepositoryEditor extends Component<Props, States> {
               rel="noopener noreferrer"
               className="g-link"
             >
-              <GoDatabase /> 数据
+              <GoDatabase /> Data
             </a>
             <span className="g-link edit mr1" onClick={() => this.setState({ importSwagger: true })}>
-              <GoLinkExternal /> 导入
+              <GoLinkExternal /> Import
             </span>
             <ImportSwaggerRepositoryForm
               open={this.state.importSwagger}
@@ -220,10 +220,10 @@ class RepositoryEditor extends Component<Props, States> {
               mode="manual"
             />
             <span className="g-link edit mr1" onClick={() => this.setState({ exportPostman: true })}>
-              <GoLinkExternal /> 导出
+              <GoLinkExternal /> Export
             </span>
             <ExportPostmanForm
-              title="导出"
+              title="Export"
               open={this.state.exportPostman}
               repoId={repository.id}
               onClose={() => this.setState({ exportPostman: false })}
@@ -232,13 +232,13 @@ class RepositoryEditor extends Component<Props, States> {
               className="g-link edit mr1"
               onClick={() => this.setState({ defaultValuesModalOpen: true })}
             >
-              <GoEllipsis /> 默认值
+              <GoEllipsis /> Defaults
             </span>
             <span
               className="g-link edit mr1 guide-1"
               onClick={() => this.setState({ historyLogDrawerOpen: true })}
             >
-              <FaHistory /> 历史
+              <FaHistory /> History
             </span>
             <DefaultValueModal
               open={this.state.defaultValuesModalOpen}

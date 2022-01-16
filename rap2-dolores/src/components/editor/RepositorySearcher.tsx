@@ -151,7 +151,7 @@ class RepositorySearcher extends Component<any, IState> {
           }}
           style={{ backgroundColor: '#fafbfc', marginRight: 12 }}
           className="dropdown-input form-control"
-          placeholder="检索名称或ID"
+          placeholder="Search name or ID"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">

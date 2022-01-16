@@ -1,8 +1,8 @@
 {
-    "email": "邮箱",
-    "password": "密码",
-    "verify-code": "验证码",
-    "register": "注册",
-    "login": "登录",
-    "forget-password": "忘记密码"
+    "email": "Email",
+    "password": "Password",
+    "verify-code": "Verify Code",
+    "register": "Register",
+    "login": "Login",
+    "forget-password": "Forget Password"
 }

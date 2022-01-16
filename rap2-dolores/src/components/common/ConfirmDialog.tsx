@@ -25,11 +25,11 @@ export default function ConfirmDialog(props: Props) {
       <DialogActions>
         {type === 'confirm' && (
           <Button onClick={props.onCancel} variant="outlined" color="default">
-            取消
+            Cancel
           </Button>
         )}
         <Button onClick={props.onConfirm} variant="outlined" color="primary" autoFocus={true}>
-          确定
+        Confirm
         </Button>
       </DialogActions>
     </Dialog>

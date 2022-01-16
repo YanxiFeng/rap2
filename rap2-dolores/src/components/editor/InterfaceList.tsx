@@ -150,7 +150,7 @@ function InterfaceList(props: InterfaceListProps) {
     e.preventDefault()
     const message = (
       <div style={{ width: 800 }}>
-        <div><div style={dangerousStyles}>模块</div>被删除后<div style={dangerousStyles}>不可恢复</div>！并且会删除<div style={dangerousStyles}>相关的接口</div>！</div>
+        <div><div style={dangerousStyles}>Module</div>被删除后<div style={dangerousStyles}>unrecoverable</div>！并且会删除<div style={dangerousStyles}>相关的接口</div>！</div>
         <div>
           确认继续删除『#${mod.id} ${mod.name}
           』吗？
@@ -158,7 +158,7 @@ function InterfaceList(props: InterfaceListProps) {
       </div>
     )
     confirm({
-      title: '确认删除模块',
+      title: 'Confirm to delete module',
       content: message,
     }).then(() => {
       dispatch(
@@ -196,11 +196,11 @@ function InterfaceList(props: InterfaceListProps) {
             color="primary"
             onClick={() => setInterfaceFormOpen(true)}
           >
-            新建接口
+            Create API
           </Button>
 
           <InterfaceForm
-            title="新建接口"
+            title="Create API"
             repository={repository}
             mod={mod}
             open={interfaceFormOpen}
@@ -209,19 +209,19 @@ function InterfaceList(props: InterfaceListProps) {
 
           <ButtonGroup fullWidth={true} size="medium">
             <Button variant="outlined" color="primary" onClick={() => setModuleFormOpen(true)}>
-              修改模块
+              Edit
             </Button>
             <Button variant="outlined" color="primary" onClick={() => setMoveModuleFormOpen(true)}>
-              移动/复制
+              Move/Copy
             </Button>
             <Button variant="outlined" color="primary" onClick={handleDeleteModule}>
-              删除模块
+              Delete
             </Button>
           </ButtonGroup>
 
           {moduleFormOpen && (
             <ModuleForm
-              title="修改模块"
+              title="Edit Module"
               module={mod}
               repository={repository}
               open={moduleFormOpen}
@@ -231,7 +231,7 @@ function InterfaceList(props: InterfaceListProps) {
 
           {moveModuleFormOpen && (
             <MoveModuleForm
-              title="移动/复制模块"
+              title="Move/Copy Module"
               mod={mod}
               repository={repository}
               open={moveModuleFormOpen}

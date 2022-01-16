@@ -119,7 +119,7 @@ export default function MoveInterfaceForm(props: Props) {
         <form className={classes.form} onSubmit={handleSubmit}>
           <div className="rmodal-body">
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>选择目标仓库：</div>
+              <div className={classes.formTitle}>Select target repository：</div>
               <FormControl>
                 <Select
                   className={classes.select}
@@ -136,7 +136,7 @@ export default function MoveInterfaceForm(props: Props) {
               </FormControl>
             </div>
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>选择目标模块：</div>
+              <div className={classes.formTitle}>Select target module：</div>
               <FormControl>
                 <Select
                   className={classes.select}
@@ -153,7 +153,7 @@ export default function MoveInterfaceForm(props: Props) {
               </FormControl>
             </div>
             <div className={classes.formItem}>
-              <div className={classes.formTitle}>操作类型：</div>
+              <div className={classes.formTitle}>Operate type：</div>
               <RadioGroup
                 name="radioListOp"
                 value={String(op)}
@@ -162,15 +162,15 @@ export default function MoveInterfaceForm(props: Props) {
                 }}
                 row={true}
               >
-                <FormControlLabel value={String(OP_MOVE)} control={<Radio />} label="移动" />
-                <FormControlLabel value={String(OP_COPY)} control={<Radio />} label="复制" />
+                <FormControlLabel value={String(OP_MOVE)} control={<Radio />} label="Move" />
+                <FormControlLabel value={String(OP_COPY)} control={<Radio />} label="Copy" />
               </RadioGroup>
             </div>
             <div className={classes.ctl}>
               <Button type="submit" variant="contained" color="primary" style={{ marginRight: 8 }}>
-                提交
+                Submit
               </Button>
-              <Button onClick={() => onClose()}>取消</Button>
+              <Button onClick={() => onClose()}>Cancel</Button>
             </div>
           </div>
         </form>

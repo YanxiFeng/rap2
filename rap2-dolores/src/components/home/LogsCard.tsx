@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, moment } from '../../family'
 import { Spin } from '../utils'
 import { Card } from '@material-ui/core'
-import imgURL  from "./chope_logo.png"
+import imgURL  from "../../assets/images/chope_logo.png"
 
 // DONE 2.3 重构 LogView
 // 1. √ 旧逻辑把 targe 和 type 混在一起，各种判断看的好蛋疼

@@ -158,7 +158,7 @@ function RepositoryForm(props: Props) {
                   <div className="rmodal-body">
                     {values.id > 0 && (
                       <div className={classes.formItem}>
-                        <div className={classes.formTitle}>拥有者</div>
+                        <div className={classes.formTitle}>Owner</div>
 
                         {values.owner && values.owner.id === auth.id ? (
                           <UserList
@@ -182,12 +182,12 @@ function RepositoryForm(props: Props) {
                       </div>
                     )}
                     <div className={classes.formItem}>
-                      <Field name="name" label="仓库名称" component={TextField} fullWidth={true} />
+                      <Field name="name" label="Repository name" component={TextField} fullWidth={true} />
                     </div>
                     <div className={classes.formItem}>
                       <Field
                         name="description"
-                        label="说明(多行，支持Markdown)"
+                        label="Description(multiple lines，support Markdown)"
                         multiline={true}
                         component={TextField}
                         fullWidth={true}
@@ -195,7 +195,7 @@ function RepositoryForm(props: Props) {
                       />
                     </div>
                     <div className={classes.formItem}>
-                      <div className={classes.formTitle}>成员</div>
+                      <div className={classes.formTitle}>Members</div>
                       <UserList
                         isMulti={true}
                         loadOptions={loadUserOptions}
@@ -207,7 +207,7 @@ function RepositoryForm(props: Props) {
                       />
                     </div>
                     <div className={classes.formItem}>
-                      <div className={classes.formTitle}>团队</div>
+                      <div className={classes.formTitle}>Team</div>
                       <Select
                         isMulti={false}
                         isClearable={true}
@@ -237,10 +237,10 @@ function RepositoryForm(props: Props) {
                       className="mr1"
                       disabled={isSubmitting}
                     >
-                      提交
+                      Submit
                     </Button>
                     <Button onClick={() => onClose()} disabled={isSubmitting}>
-                      取消
+                      Cancel
                     </Button>
                   </div>
                 </Form>

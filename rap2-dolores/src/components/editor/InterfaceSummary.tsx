@@ -229,7 +229,7 @@ class InterfaceSummary extends Component<
                 <TextField
                   style={{ marginTop: 0 }}
                   id="name"
-                  label="名称"
+                  label="Name"
                   value={itf.name || ''}
                   fullWidth={true}
                   autoComplete="off"
@@ -242,7 +242,7 @@ class InterfaceSummary extends Component<
               <div>
                 <TextField
                   id="url"
-                  label="地址"
+                  label="URL"
                   value={itf.url || ''}
                   fullWidth={true}
                   autoComplete="off"
@@ -254,7 +254,7 @@ class InterfaceSummary extends Component<
               </div>
               <div>
                 <div style={{ width: 90, display: 'inline-block' }}>
-                  <InputLabel shrink={true} htmlFor="method-label-placeholder"> 类型 </InputLabel>
+                  <InputLabel shrink={true} htmlFor="method-label-placeholder"> Type </InputLabel>
                   <Select
                     value={itf.method}
                     input={<Input name="method" id="method-label-placeholder" />}
@@ -272,7 +272,7 @@ class InterfaceSummary extends Component<
                   </Select>
                 </div>
                 <div style={{ width: 120, display: 'inline-block' }}>
-                  <InputLabel shrink={true} htmlFor="status-label-placeholder" style={{ width: 100 }}> 状态码 </InputLabel>
+                  <InputLabel shrink={true} htmlFor="status-label-placeholder" style={{ width: 100 }}> Status code </InputLabel>
                   <Select
                     value={itf.status}
                     input={<Input name="status" id="status-label-placeholder" />}
@@ -292,7 +292,7 @@ class InterfaceSummary extends Component<
               </div>
               <TextField
                 id="description"
-                label="描述（可多行, 支持Markdown）"
+                label="Description（multiple lines, support Markdown）"
                 value={itf.description || ''}
                 fullWidth={true}
                 multiline={true}
@@ -308,14 +308,14 @@ class InterfaceSummary extends Component<
               <>
                 <li>
                   <span className="mr5">
-                    <span className="label">接口ID：</span>
+                    <span className="label">API ID：</span>
                     {itf.id}
                   </span>
                 </li>
                 <li>
                   <CopyToClipboard text={itf.url} type="right">
                     <span className="mr5">
-                      <span className="label">地址：</span>
+                      <span className="label">Address：</span>
                       <a
                         href={`${serve}/app/mock/${repository.id}${getRelativeUrl(itf.url || '')}`}
                         target="_blank"
@@ -328,13 +328,13 @@ class InterfaceSummary extends Component<
                 </li>
                 <li>
                   <span>
-                    <span className="label">类型：</span>
+                    <span className="label">Type：</span>
                     <span>{itf.method}</span>
                   </span>
                 </li>
                 <li>
                   <span>
-                    <span className="label">状态码：</span>
+                    <span className="label">Status Code：</span>
                     <span>{itf.status}</span>
                   </span>
                 </li>

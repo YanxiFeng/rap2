@@ -8,7 +8,7 @@ import { useHandleDelete, useHandleExit, useHandleJoin } from './OrganizationLis
 import { Card } from '@material-ui/core'
 
 function avatar(user: any) {
-  return `https://work.alibaba-inc.com/photo/${user.empId}.220x220.jpg`
+  return `https://static.chope.co/static/mainwebsite5.0/img/Choperight.svg?date=20210511142734`
 }
 
 interface Props {

@@ -75,7 +75,7 @@ function OrganizationForm(props: Props) {
       onClose={(_event, reason) => (reason !== 'backdropClick' && onClose())}
       TransitionComponent={SlideUp}
     >
-      <DialogTitle>新建团队</DialogTitle>
+      <DialogTitle>Create Team</DialogTitle>
       <DialogContent dividers={true}>
         <div className={classes.form}>
           <Formik

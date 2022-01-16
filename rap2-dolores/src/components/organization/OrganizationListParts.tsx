@@ -70,7 +70,7 @@ export function CreateButton() {
         onClick={() => setOpen(true)}
       >
         {' '}
-        新建团队{' '}
+        Create Team{' '}
       </Button>
       <OrganizationForm open={open} onClose={() => setOpen(false)} />
     </span>
@@ -90,8 +90,8 @@ export function OrganizationsTypeDropdown({ url }: { url: string }) {
       value={url}
       onChange={e => handlePush(e.target.value as string)}
     >
-      <MenuItem value="/organization/joined">我的团队</MenuItem>
-      <MenuItem value="/organization/all">全部团队</MenuItem>
+      <MenuItem value="/organization/joined">My Teams</MenuItem>
+      <MenuItem value="/organization/all">All Teams</MenuItem>
     </Select>
   )
 }

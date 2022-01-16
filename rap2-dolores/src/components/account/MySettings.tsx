@@ -32,12 +32,12 @@ function MySettings(props: Props) {
 
   return (
     <Paper className={classes.root}>
-      <List subheader={<ListSubheader>偏好设置</ListSubheader>}>
+      <List subheader={<ListSubheader>Preference</ListSubheader>}>
         <ListItem>
           <ListItemIcon>
             <Palette />
           </ListItemIcon>
-          <ListItemText primary="个性皮肤设置" />
+          <ListItemText primary="Skin setting" />
           <ListItemSecondaryAction>
             <IconButton disabled={isFetching} onClick={() => setEditingThemeTemplate(true)}>
               <Settings />

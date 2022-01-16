@@ -83,7 +83,7 @@ export default function ExportPostmanForm(props: {
 
           <div className="mt10">
             <Button variant="outlined" onClick={onClose}>
-              关闭
+              Close
             </Button>
           </div>
         </form>

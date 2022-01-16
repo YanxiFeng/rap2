@@ -213,7 +213,7 @@ function MaterialSelect(props: Props) {
       return inputValue && inputValue.trim() ? '搜不到数据' : '请输入检索关键字'
     },
     onChange,
-    placeholder: `请选择(${isMulti ? '多选' : '单选'})`,
+    placeholder: `Please select(${isMulti ? 'Multi-Selection' : 'Single Selection'})`,
   }
 
   if (value) {

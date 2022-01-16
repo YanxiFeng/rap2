@@ -69,7 +69,7 @@ function InterfaceEditorToolbar(props: Props) {
           variant="contained"
           color="primary"
           disabled={loading}
-          label="保存"
+          label="Save"
           size="small"
         >
           <Save className={classes.rightIcon} />
@@ -80,10 +80,10 @@ function InterfaceEditorToolbar(props: Props) {
           variant="contained"
           size="small"
         >
-          取消
+          Cancel
           <Cancel className={classes.rightIcon} />
         </Button>
-        <span className="locker-warning hide">已经锁定当前接口！</span>
+        <span className="locker-warning hide">This API has been locked！</span>
       </div>
     )
   }
@@ -103,7 +103,7 @@ function InterfaceEditorToolbar(props: Props) {
           onClick={() => window.open(`${serve}/interface/backup/JSONData/${itfId}`)}
           size="small"
         >
-          导出
+          Export
         <CloudDownload className={classes.rightIcon} />
         </Button>
       </Tooltip>
@@ -114,7 +114,7 @@ function InterfaceEditorToolbar(props: Props) {
           onClick={() => setShowHistory(true)}
           size="small"
         >
-          历史
+          History
         <History className={classes.rightIcon} />
         </Button>
       </Tooltip>
@@ -125,7 +125,7 @@ function InterfaceEditorToolbar(props: Props) {
           variant="contained"
           size="small"
         >
-          移动
+          Move
         <KeyboardTab className={classes.rightIcon} />
         </Button>
       </Tooltip>
@@ -136,7 +136,7 @@ function InterfaceEditorToolbar(props: Props) {
           variant="contained"
           color="primary"
           disabled={loading}
-          label="编辑"
+          label="Edit"
           size="small"
         >
           <Create className={classes.rightIcon} />

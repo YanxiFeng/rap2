@@ -47,11 +47,11 @@ class RegisterForm extends Component<Props, State> {
       <div className="wrapper" style={{ background: this.state.bg }}>
         <Card className="RegisterForm">
           <div className="header">
-            <span className="title">注册</span>
+            <span className="title">Register</span>
           </div>
           <form className="body" onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label>姓名：</label>
+              <label>Name：</label>
               <input
                 value={this.state.fullname}
                 onChange={e => this.setState({ fullname: e.target.value })}
@@ -62,7 +62,7 @@ class RegisterForm extends Component<Props, State> {
               />
             </div>
             <div className="form-group">
-              <label>邮箱：</label>
+              <label>Email：</label>
               <input
                 value={this.state.email}
                 onChange={e => this.setState({ email: e.target.value })}
@@ -72,7 +72,7 @@ class RegisterForm extends Component<Props, State> {
               />
             </div>
             <div className="form-group">
-              <label>密码：</label>
+              <label>Password：</label>
               <input
                 value={this.state.password}
                 onChange={e => this.setState({ password: e.target.value })}
@@ -82,8 +82,8 @@ class RegisterForm extends Component<Props, State> {
                 required={true}
               />
             </div>
-            <Button type="submit" variant="contained" color="primary" style={{ marginRight: 8 }}> 提交 </Button>
-            <Link to="/account">取消</Link>
+            <Button type="submit" variant="contained" color="primary" style={{ marginRight: 8 }}> Submit </Button>
+            <Link to="/account">Cancel</Link>
           </form>
         </Card>
       </div>
