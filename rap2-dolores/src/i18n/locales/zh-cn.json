@@ -4,5 +4,6 @@
   "verify-code": "验证码",
   "register": "注册",
   "login": "登录",
-  "forget-password": "忘记密码"
+  "forget-password": "忘记密码",
+  "Confirm": "确认"
 }
